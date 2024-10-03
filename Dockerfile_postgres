@@ -1,3 +1,0 @@
-FROM postgres
-
-LABEL maintainer="Vladyslav Mishchenko <vmdevspace@gmail.com>"
