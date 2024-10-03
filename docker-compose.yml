@@ -1,0 +1,33 @@
+services:
+  django:
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile_django
+    container_name: django
+    restart: always
+    volumes:
+      - .:/home/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+
+  postgres:
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile_postgres
+    container_name: postgres
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:${POSTGRES_DATA}
+    ports:
+      - ${POSTGRES_PORT}:${POSTGRES_HOST_PORT}
+
+volumes:
+  postgres_data:
