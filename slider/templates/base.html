@@ -13,8 +13,26 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    {% block content%}
-    {% endblock%}
+    <header class="">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/documentation">Documentation</a>
+        <a href="/blog">Blog</a>
+        <a href="/contacts">Contacts</a>
+    </header>
+
+    <div class="content">
+        {% block content%}
+        {% endblock%}
+    </div>
+
+    <footer class="">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/documentation">Documentation</a>
+        <a href="/blog">Blog</a>
+        <a href="/contacts">Contacts</a>
+    </footer>
 
     <script src="{% static 'js/script.js' %}"></script>
 </body>
