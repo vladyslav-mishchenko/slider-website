@@ -20,6 +20,8 @@ services:
     restart: always
     env_file:
       - .env
+    volumes:
+      - postgres_data:${POSTGRES_DATA}
     ports:
       - ${POSTGRES_HOST_PORT}:${POSTGRES_PORT}
 
