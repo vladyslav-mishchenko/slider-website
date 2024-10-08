@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'users',
     'home',
     'about',
-    'documentation',
+    'docs',
     'blog',
     'contacts',
 ]

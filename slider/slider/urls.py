@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from home.views import home
 from about.views import about
-from documentation.views import documentation
+from docs.views import docs
 from blog.views import blog
 from contacts.views import contacts
 
@@ -26,7 +26,7 @@ from contacts.views import contacts
 urlpatterns = [
     path('', home, name='home'),
     path('about/', about, name='about'),
-    path('documentation/', documentation, name='documentation'),
+    path('docs/', docs, name='docs'),
     path('blog/', blog, name='blog'),
     path('contacts/', contacts, name='contacts'),
     path('admin/', admin.site.urls),
