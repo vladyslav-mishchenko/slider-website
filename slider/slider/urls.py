@@ -19,15 +19,16 @@ from django.urls import path
 from home.views import home
 from about.views import about
 from docs.views import docs
-from blog.views import blog
 from contacts.views import contacts
+
+from django.urls import include
 
 
 urlpatterns = [
     path('', home, name='home'),
     path('about/', about, name='about'),
     path('docs/', docs, name='docs'),
-    path('blog/', blog, name='blog'),
+    path('blog/', include('blog.urls')),
     path('contacts/', contacts, name='contacts'),
     path('admin/', admin.site.urls),
 ]
