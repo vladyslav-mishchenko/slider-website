@@ -26,9 +26,9 @@ from django.urls import include
 
 urlpatterns = [
     path('', home, name='home'),
-    path('about/', about, name='about'),
-    path('docs/', docs, name='docs'),
-    path('blog/', include('blog.urls')),
-    path('contacts/', contacts, name='contacts'),
-    path('admin/', admin.site.urls),
+    path('about', about, name='about'),
+    path('docs', docs, name='docs'),
+    path('blog', include('blog.urls')),
+    path('contacts', contacts, name='contacts'),
+    path('admin', admin.site.urls),
 ]
