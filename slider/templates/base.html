@@ -10,32 +10,327 @@
     </title>
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
-<body>
-    <header class="">
-        <a href="/">Home</a>
 
-        <a href="/about">About</a>
-        <a href="/docs">Docs</a>
-        <a href="/blog">Blog</a>
-        <a href="/contacts">Contacts</a>
-    </header>
+<body class="body">
+    <div class="website">
+        <header class="header-fixed">
+            <div class="container">
+                <div class="g header">
+                    <div class="container">
+                        <div class="header-cols">
+                            <a href="/" class="logo-link">Slider</a>
 
-    <div class="content">
-        {% block content%}
-        {% endblock%}
+                            <div class="c1">
+                                <nav class="main-nav">
+                                    <ul class="main-menu">
+                                        <li class="item">
+                                            <a href="/about" class="link">About</a>
+                                        </li>
+
+                                        <li class="item">
+                                            <a href="/docs" class="link">Docs</a>
+                                        </li>
+
+                                        <li class="item">
+                                            <a href="/blog" class="link">Blog</a>
+                                        </li>
+
+                                        <li class="item">
+                                            <a href="/contacts" class="link">Contacts</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div class="c2">
+                                <a href="http://github.com" class="repository-link">
+                                    <i class="icon-github"></i>
+                                </a>
+                            </div>
+
+                            <div class="c3">
+                                <div id="mmbtn" class="mobile-menu-btn mobile-btn">
+                                    <div class="container">
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            {% block content%}
+            {% endblock%}
+        </div>
+
+        <footer class="g footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="c1">
+                        <div class="footer-logo">Slider</div>
+                    </div>
+
+                    <div class="c2">
+                        <nav class="footer-nav">
+                            <ul class="footer-menu">
+                                <li class="item">
+                                    <a href="/about" class="link">About</a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="/docs" class="link">Docs</a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="/blog" class="link">Blog</a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="/contacts" class="link">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="c3">
+                        <div class="footer-subscribe">
+                            <div class="container">
+                                <div class="c1">
+                                    <div class="subscribe-message">
+                                        <span class="t">Subscribe to our news letter to get latest updates and
+                                            news</span>
+                                    </div>
+                                </div>
+
+                                <div class="c2">
+                                    <form action="#" class="footer-subscribe-form">
+                                        <div class="fields">
+                                            <div class="footer-subscribe-form--field">
+                                                <div class="r">
+                                                    <div class="footer-subscribe-form--label">
+                                                        <div class="c1">
+                                                            <label for="">Name:</label>
+                                                        </div>
+
+                                                        <div class="c2">
+                                                            <div class="error"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="r">
+                                                    <input name="name" class="footer-subscribe-form--input" type="text"
+                                                        placeholder="Enter Your Name">
+                                                </div>
+                                            </div>
+
+                                            <div class="footer-subscribe-form--field">
+                                                <div class="r">
+                                                    <div class="footer-subscribe-form--label">
+                                                        <div class="c1">
+                                                            <label for="">Email:</label>
+                                                        </div>
+
+                                                        <div class="c2">
+                                                            <div class="error"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="r">
+                                                    <input name="email" class="footer-subscribe-form--input" type="text"
+                                                        placeholder="Enter Your Email">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="submit">
+                                            <input class="footer-subscribe-form--submit" type="submit"
+                                                value="Subscribe">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="footer-subscribe-preloader">
+                                <div class="footer-subscribe--preloader">
+                                    <div class="container">
+                                        <ul class="preloader-modes">
+
+                                            <li class="mode sending on">
+                                                <div class="preloader-mode">
+                                                    <div class="loadingio-spinner-spinner-go6ip63iaz">
+                                                        <div class="ldio-m9d4numlatn">
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="mode success">
+                                                <div class="preloader-mode">
+                                                    <div class="title">Success!</div>
+
+                                                    <div class="message">
+                                                        <p>The subscribe request has sent</p>
+                                                        <p>Check your email and confirm your subscription</p>
+                                                    </div>
+
+                                                    <div class="close">
+                                                        <button>Close</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="mode error">
+                                                <div class="preloader-mode">
+                                                    <div class="title">Error!</div>
+
+                                                    <div class="message">
+                                                        <p>Looks like server error!</p>
+                                                    </div>
+
+                                                    <div class="link">
+                                                        <div class="preload-mode--link">
+                                                            <span class="t">Visit <a href="" class="">Contacts</a>
+                                                                page</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="close">
+                                                        <button>Close</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c4">
+                        <div class="footer-copyright">
+                            <span class="copy">&#169;</span>
+                            <span class="text">Slider 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="c5">
+                        <ul class="footer-social">
+                            <li class="item">
+                                <a href="" class="link">
+                                    <i class="icon-github"></i>
+                                </a>
+                            </li>
+
+                            <li class="item">
+                                <a href="" class="link">
+                                    <i class="icon-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <footer class="">
-        <a href="/">Home</a>
-        
-        <a href="/about">About</a>
-        <a href="/docs">Docs</a>
-        <a href="/blog">Blog</a>
-        <a href="/contacts">Contacts</a>
-    </footer>
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-panel">
+            <div class="container">
+                <div class="header">
+                    <div class="mobile-manu-panel-columns">
+                        <div class="col-1">
+                            <div class="mobile-manu-panel-title">
+                                <div class="title">Menu</div>
+                            </div>
+                        </div>
 
-    <script src="{% static 'js/script.js' %}"></script>
+                        <div class="separator"></div>
+
+                        <div class="col-2">
+                            <div class="mobile-manu-panel-close">
+                                <button class="close">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="mobile-nav-list">
+                        <nav class="mobile-nav">
+                            <div class="title">Main menu</div>
+
+                            <ul class="mobile-menu">
+                                <li class="item">
+                                    <a href="/" class="link">Home</a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="/about" class="link">About</a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="/docs" class="link">Docs</a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="/blog" class="link">Blog</a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="/contacts" class="link">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <nav class="mobile-nav">
+                            <div class="title">Blog</div>
+
+                            <ul class="mobile-menu">
+                                <li class="item">
+                                    <a href="" class="link">News</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'assets/js/script.js' %}"></script>
 </body>
+
 </html>

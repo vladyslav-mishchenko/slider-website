@@ -5,5 +5,59 @@
 {% endblock %}
 
 {% block content%}
-    home.html
+            <div class="main-slider g">
+                <div class="container-fluid">
+                    <div id="mainslider" class="img-slider">
+                        
+                        {% load static %}
+                        <div class="img-slider--slides">
+                            <img class="slide" src="{% static 'images/slider/slide-1.jpg' %}" alt="slide-1">
+                            <img class="slide" src="{% static 'images/slider/slide-2.jpg' %}" alt="slide-2">
+                            <img class="slide active" src="{% static 'images/slider/slide-3.jpg' %}" alt="slide-3">
+                            <img class="slide" src="{% static 'images/slider/slide-4.jpg' %}" alt="slide-4">
+                            <img class="slide" src="{% static 'images/slider/slide-5.jpg' %}" alt="slide-5">
+                        </div>
+
+                        <div class="img-slider--sections">
+                            <div class="top"></div>
+
+                            <div class="left">
+                                <div class="img-slider--nav-btn">
+                                    <button class="left-btn">
+                                        <i class="icon-arrow-left"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="center"></div>
+
+                            <div class="right">
+                                <div class="img-slider--nav-btn">
+                                    <button class="right-btn">
+                                        <i class="icon-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="bottom">
+                                <div class="img-slider--miniatures">
+                                    <div data-slide="0" class="miniature"></div>
+                                    <div data-slide="1" class="miniature"></div>
+                                    <div data-slide="2" class="miniature active"></div>
+                                    <div data-slide="3" class="miniature"></div>
+                                    <div data-slide="4" class="miniature"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text g">
+                <div class="container">
+                    <article class="article">
+                        <p>Home Page</p>
+                    </article>
+                </div>
+            </div>
 {% endblock%} 
