@@ -7,6 +7,6 @@ app_name = 'blog'
 
 urlpatterns = [
     path('', blog, name='blog'),
-    path('<slug:category>', category, name='category'),
-    path('<slug:category>/<slug:post>', post, name='post'),
+    path('/<slug:category>', category, name='category'),
+    path('/<slug:category>/<slug:post>', post, name='post'),
 ]
