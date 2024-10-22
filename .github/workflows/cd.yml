@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: to VPS
-      - uses: actions/checkout@v2.1.0
+        uses: actions/checkout@v2.1.0
         with:
           host: ${{ secrets.VPS_HOST }}
           user: ${{ secrets.VPS_USER }}
