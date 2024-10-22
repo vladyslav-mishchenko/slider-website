@@ -86,7 +86,6 @@ class Elements {
     this.leftBtn = this.el(slider + " .left-btn");
     this.rightBtn = this.el(slider + " .right-btn");
     this.center = this.el(slider + " .center");
-    console.log(slider);
   }
   el(element) {
     return document.querySelector(element);
