@@ -1,0 +1,12 @@
+name: CD_to_VPS
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: to VPS
