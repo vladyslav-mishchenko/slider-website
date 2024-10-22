@@ -18,7 +18,7 @@ jobs:
           script: |
             cd /home/slider/slider-website
             git pull origin production
-            sudo docker-compose rm -sf
-            sudo docker-compose build
-            sudo docker-compose up -d
-            sudo docker image prune -af
+            docker-compose rm -sf
+            docker-compose build
+            docker-compose up -d
+            docker image prune -af
