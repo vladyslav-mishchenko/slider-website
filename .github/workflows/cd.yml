@@ -14,11 +14,12 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
+          password: ${{ secrets.VPS_PASSWORD }}
           key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
           script: |
             cd /home/slider/slider-website
             git pull origin production
-            docker-compose rm -sf
-            docker-compose build
-            docker-compose up -d
-            docker image prune -af
+            sudo docker-compose rm -sf
+            sudo docker-compose build
+            sudo docker-compose up -d
+            sudo docker image prune -af
