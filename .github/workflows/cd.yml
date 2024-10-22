@@ -10,3 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: to VPS
+        with:
+          script: |
+            git pull origin production
