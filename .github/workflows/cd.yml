@@ -8,9 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    uses: actions/checkout@v1
     steps:
       - name: to VPS
+      - uses: actions/checkout@v2.1.0
         with:
           host: ${{ secrets.VPS_HOST }}
           user: ${{ secrets.VPS_USER }}
