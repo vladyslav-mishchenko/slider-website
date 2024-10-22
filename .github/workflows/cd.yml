@@ -11,5 +11,12 @@ jobs:
     steps:
       - name: to VPS
         with:
+          host: ${{ secrets.VPS_HOST }}
+          user: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
           script: |
             git pull origin production
+            sudo docker-compose rm -sf
+            sudo docker-compose build
+            sudo docker-compose up -d
+            sudo docker image prune -af
