@@ -150,3 +150,8 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = ['http://172.23.0.4:8000']
+CSRF_ALLOWED_ORIGINS = ['http://172.23.0.4:8000']
+CORS_ORIGINS_WHITELIST = ['http://172.23.0.4:8000']
+CORS_ALLOWED_ORIGINS = ['http://172.23.0.4:8000']
