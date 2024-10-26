@@ -9,6 +9,22 @@
                 <div class="container">
                     <article class="article">
                         <p>Category Page</p>
+
+                        <div class="menu">
+                            {% for category in categories %}
+                                <a href="{% url 'blog:category' category.category_slug %}" class="">{{ category.name }}</a>
+                            {% endfor %}
+                        </div>
+
+                        <div class="">
+                            {% for post in posts %}
+                                <div>{{ post.title }}</div>
+                                <div>{{ post.description }}</div>
+                                <div>
+                                    <a href="{% url 'blog:post' post.category.category_slug post.post_slug %}" class="">link</a>
+                                </div>
+                            {% endfor %}
+                        </div>
                     </article>
                 </div>
             </div>
