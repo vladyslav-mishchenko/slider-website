@@ -1121,7 +1121,10 @@ a.deletelink:focus, a.deletelink:hover {
     margin: 0;
     border-top: 1px solid var(--hairline-color);
     width: 100%;
+<<<<<<< HEAD
+=======
     box-sizing: border-box;
+>>>>>>> 5062f10ddb15fd979a48a91153db121e425d2264
 }
 
 .paginator a:link, .paginator a:visited {
