@@ -5,25 +5,6 @@ Blog Post
 {% endblock %}
 
 {% block content%}
-            <!-- <div class="text g">
-                <div class="container">
-                    <article class="article">
-                        <p>Post Page</p>
-                        <div class="menu">
-                            {% for category in categories %}
-                                <a href="{% url 'blog:category' category.category_slug %}" class="">{{ category.name }}</a>
-                            {% endfor %}
-                        </div>
-
-                        <div>
-                            {% for p in post %}
-                                <div>{{ p.title }}</div>
-                                <div>{{ p.text }}</div>
-                            {% endfor %}
-                        </div>
-                    </article>
-                </div>
-            </div> -->
 
             {% load static %}
             <main class="blog-post">
@@ -32,81 +13,25 @@ Blog Post
                         <div class="container">
                             {% for p in post %}
                             <h1>{{ p.title }}</h1>
-                            <!-- <div>{{ p.text }}</div> -->
                             {% endfor %}
 
-                            <div class="blog-post--category">Business</div>
+                            <div class="blog-post--category">
+                                {% for p in post %}
+                                <div>{{ p.category.name }}</div>
+                                {% endfor %}
+                            </div>
                         </div>
                     </section>
 
                     <figure class="blog-post--figure">
-                        <img src="{% static '/images/blog/post-4/article-4.jpg' %}" alt="" class="img">
+                        <img src="{% for p in post %} {{ p.img_article }} {% endfor %}" alt="" class="img">
                     </figure>
 
                     <section class="blog-post--text p">
                         <div class="container">
                             {% for p in post %}
-                            <h2>{{ p.title }}</h2>
-                            <!-- <div>{{ p.text }}</div> -->
+                                <div>{{ p.text|safe }}</div>
                             {% endfor %}
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
-                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
-                                hendrerit gravida rutrum quisque non.</p>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
-                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
-                                hendrerit gravida rutrum quisque non.</p>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
-                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
-                                hendrerit gravida rutrum quisque non.</p>
-
-                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
-                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
-                                hendrerit gravida rutrum quisque non.</p>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
-                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
-                                hendrerit gravida rutrum quisque non.</p>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
-                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
-                                hendrerit gravida rutrum quisque non.</p>
-
-                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
-                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
-                                hendrerit gravida rutrum quisque non.</p>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
-                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
-                                hendrerit gravida rutrum quisque non.</p>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
-                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
-                                hendrerit gravida rutrum quisque non.</p>
                         </div>
                     </section>
                 </article>

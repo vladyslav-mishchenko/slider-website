@@ -5,18 +5,18 @@ Blog Category
 {% endblock %}
 
 {% block content%}
+
+            {% load static %}
             <div class="blog-category g">
                 <div class="container">
                     <div class="blog-category--columns">
                         <main class="main">
-
-                            {% load static %}
                             <ul class="blog-category-previews">
                                 {% for post in posts %}
                                 <li>
                                     <div class="blog-category-preview">
                                         <div class="c1">
-                                            <img class="blog-category--img" src="{{ post.image_path }}" alt="">
+                                            <img class="blog-category--img" src="{{ post.img_preview }}" alt="">
                                         </div>
 
                                         <div class="c2">
