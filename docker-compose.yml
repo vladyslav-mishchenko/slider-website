@@ -21,6 +21,9 @@ services:
       - .:/app
     # ports:
     #   - "8000:8000"
+    # networks:
+    #   inner:
+    #     ipv4_address: "172.20.128.2"
     depends_on:
       - postgres
 
@@ -34,6 +37,17 @@ services:
       - postgres_data:${POSTGRES_DATA}
     ports:
       - ${POSTGRES_HOST_PORT}:${POSTGRES_PORT}
+    # networks:
+    #   inner:
+    #     ipv4_address: "172.20.128.2"
 
 volumes:
     postgres_data:
+
+# networks:
+#   inner:
+#     driver: bridge
+#     ipam:
+#       config:
+#         - subnet: "172.20.0.0/16"
+#           ip_range: "172.20.0.0/16"
