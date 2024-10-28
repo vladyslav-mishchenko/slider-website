@@ -1,31 +1,65 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Blog Category
+Blog Category
 {% endblock %}
 
 {% block content%}
-            <div class="text g">
+            <div class="blog-category g">
                 <div class="container">
-                    <article class="article">
-                        <p>Category Page</p>
+                    <div class="blog-category--columns">
+                        <main class="main">
 
-                        <div class="menu">
-                            {% for category in categories %}
-                                <a href="{% url 'blog:category' category.category_slug %}" class="">{{ category.name }}</a>
-                            {% endfor %}
-                        </div>
+                            {% load static %}
+                            <ul class="blog-category-previews">
+                                {% for post in posts %}
+                                <li>
+                                    <div class="blog-category-preview">
+                                        <div class="c1">
+                                            <img class="blog-category--img" src="{{ post.image_path }}" alt="">
+                                        </div>
 
-                        <div class="">
-                            {% for post in posts %}
-                                <div>{{ post.title }}</div>
-                                <div>{{ post.description }}</div>
-                                <div>
-                                    <a href="{% url 'blog:post' post.category.category_slug post.post_slug %}" class="">link</a>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    </article>
+                                        <div class="c2">
+                                            <div class="blog-category--article">
+                                                <div class="title">
+                                                    <a href="{% url 'blog:post' post.category.category_slug post.post_slug %}" class="post-link">
+                                                        <h2>{{ post.title }}</h2>
+                                                    </a>
+                                                </div>
+
+                                                <div class="text">
+                                                    <p>{{ post.description }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </main>
+
+                        <aside class="aside">
+                            <ul class="aside-blocks">
+                                <li>
+                                    <div class="aside-block">
+                                        <div class="aside-block--title">Categories</div>
+
+                                        <nav class="blog-category-nav">
+                                            <ul class="blog-category-menu">
+                                                {% for category in categories %}
+                                                <li class="item">
+                                                    <a href="{% url 'blog:category' category.category_slug %}" class="link">
+                                                        <div class="blog-category--item">{{ category.name }}</div>
+                                                    </a>
+                                                </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
                 </div>
             </div>
-{% endblock%} 
+{% endblock%}

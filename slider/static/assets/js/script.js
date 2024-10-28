@@ -47,11 +47,25 @@ var __publicField = (obj, key, value) => {
 })();
 const style = "";
 const form = document.querySelector(".footer-subscribe-form");
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-  console.log(form["name"].value);
-  console.log(form["email"].value);
-});
+const footerSubscribePreloader = document.querySelector(".footer-subscribe-preloader");
+const preloaderModes = document.querySelectorAll(".preloader-modes .mode");
+if (form != null) {
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    footerSubscribePreloader.classList.add("d");
+    setTimeout(function() {
+      footerSubscribePreloader.classList.add("a");
+      setTimeout(function() {
+        preloaderModes[0].classList.remove("on");
+        preloaderModes[1].classList.add("on");
+        setTimeout(function() {
+          preloaderModes[1].classList.remove("on");
+          preloaderModes[2].classList.add("on");
+        }, 5e3);
+      }, 7e3);
+    }, 10);
+  });
+}
 const body = document.querySelector(".body");
 const mobileBtn = document.querySelector(".mobile-btn");
 const mobileMenuOverlay = document.querySelector(".mobile-menu-overlay");
@@ -86,7 +100,6 @@ class Elements {
     this.leftBtn = this.el(slider + " .left-btn");
     this.rightBtn = this.el(slider + " .right-btn");
     this.center = this.el(slider + " .center");
-    console.log(slider);
   }
   el(element) {
     return document.querySelector(element);
@@ -106,7 +119,9 @@ class Slider extends Elements {
     this.events();
   }
   start() {
-    this.setTimeoutId = setTimeout(() => this.run(), this.firstStartTimeout);
+    if (this.slides.length != 0) {
+      this.setTimeoutId = setTimeout(() => this.run(), this.firstStartTimeout);
+    }
   }
   stop() {
     clearTimeout(this.setTimeoutId);

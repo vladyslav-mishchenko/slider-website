@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Blog Post               
+Blog Post
 {% endblock %}
 
 {% block content%}
-            <div class="text g">
+            <!-- <div class="text g">
                 <div class="container">
                     <article class="article">
                         <p>Post Page</p>
@@ -23,5 +23,92 @@
                         </div>
                     </article>
                 </div>
-            </div>
-{% endblock%} 
+            </div> -->
+
+            {% load static %}
+            <main class="blog-post">
+                <article class="article">
+                    <section class="blog-post--title p">
+                        <div class="container">
+                            {% for p in post %}
+                            <h1>{{ p.title }}</h1>
+                            <!-- <div>{{ p.text }}</div> -->
+                            {% endfor %}
+
+                            <div class="blog-post--category">Business</div>
+                        </div>
+                    </section>
+
+                    <figure class="blog-post--figure">
+                        <img src="{% static '/images/blog/post-4/article-4.jpg' %}" alt="" class="img">
+                    </figure>
+
+                    <section class="blog-post--text p">
+                        <div class="container">
+                            {% for p in post %}
+                            <h2>{{ p.title }}</h2>
+                            <!-- <div>{{ p.text }}</div> -->
+                            {% endfor %}
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
+                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
+                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
+                                hendrerit gravida rutrum quisque non.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
+                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
+                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
+                                hendrerit gravida rutrum quisque non.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
+                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
+                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
+                                hendrerit gravida rutrum quisque non.</p>
+
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
+                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
+                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
+                                hendrerit gravida rutrum quisque non.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
+                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
+                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
+                                hendrerit gravida rutrum quisque non.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
+                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
+                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
+                                hendrerit gravida rutrum quisque non.</p>
+
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
+                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
+                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
+                                hendrerit gravida rutrum quisque non.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
+                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
+                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
+                                hendrerit gravida rutrum quisque non.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
+                                risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
+                                Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in
+                                hendrerit gravida rutrum quisque non.</p>
+                        </div>
+                    </section>
+                </article>
+            </main>
+{% endblock%}
