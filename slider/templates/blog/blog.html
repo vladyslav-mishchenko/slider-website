@@ -1,15 +1,48 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Blog
+Blog
 {% endblock %}
 
 {% block content%}
-            <div class="text g">
+
+            {% load static %}
+            <div class="all-blog-posts g">
                 <div class="container">
-                    <article class="article">
-                        <p>Blog Home Page ***</p>
-                    </article>
+                    <div class="page-block--title">All posts</div>
+
+                    <ul class="all-blog-posts--previews">
+                        {% for post in posts %}
+                        <li>
+                            <div class="all-blog-posts--preview">
+                                <div class="c1">
+                                    <img class="all-blog-posts--img" src="{{ post.img_preview }}" alt="">
+                                </div>
+
+                                <div class="c2">
+                                    <div class="all-blog-posts--article">
+                                        <div class="category">
+                                            <a href="/blog/{{ post.category.category_slug }}" class="category-link">
+                                                {{ post.category.name }}
+                                            </a>
+                                        </div>
+
+                                        <div class="title">
+                                            <a href="{% url 'blog:post' post.category.category_slug post.post_slug %}"
+                                                class="post-link">
+                                                <h2>{{ post.title }}</h2>
+                                            </a>
+                                        </div>
+
+                                        <div class="text">
+                                            <p>{{ post.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
-{% endblock%} 
+{% endblock%}

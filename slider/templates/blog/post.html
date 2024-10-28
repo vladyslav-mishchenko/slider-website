@@ -1,15 +1,39 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Blog Post               
+Blog Post
 {% endblock %}
 
 {% block content%}
-            <div class="text g">
-                <div class="container">
-                    <article class="article">
-                        <p>Post Page</p>
-                    </article>
-                </div>
-            </div>
-{% endblock%} 
+
+            {% load static %}
+            <main class="blog-post">
+                <article class="article">
+                    <section class="blog-post--title p">
+                        <div class="container">
+                            {% for p in post %}
+                            <h1>{{ p.title }}</h1>
+                            {% endfor %}
+
+                            <div class="blog-post--category">
+                                {% for p in post %}
+                                <div>{{ p.category.name }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </section>
+
+                    <figure class="blog-post--figure">
+                        <img src="{% for p in post %} {{ p.img_article }} {% endfor %}" alt="" class="img">
+                    </figure>
+
+                    <section class="blog-post--text p">
+                        <div class="container">
+                            {% for p in post %}
+                                <div>{{ p.text|safe }}</div>
+                            {% endfor %}
+                        </div>
+                    </section>
+                </article>
+            </main>
+{% endblock%}
