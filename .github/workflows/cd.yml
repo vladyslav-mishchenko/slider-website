@@ -18,8 +18,9 @@ jobs:
           key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
           script: |
             cd /home/slider/slider-website
+            docker-compose down
             git pull origin production
-            docker-compose rm -sf
-            docker-compose build
+            # docker-compose rm -sf
+            # docker-compose build
             docker-compose up -d
-            docker image prune -af
+            # docker image prune -af
