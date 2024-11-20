@@ -1,15 +1,168 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Contacts
+Contacts
 {% endblock %}
 
 {% block content%}
-            <div class="text g">
+            <div class="contacts-page">
                 <div class="container">
-                    <article class="article">
-                        <p>Contacts Page</p>
-                    </article>
+                    <div class="contacts-titles">
+                        <div class="page-title">Contact us</div>
+
+                        <h1>Let's Start a Conversation</h1>
+
+                        <div class="description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim.</p>
+                        </div>
+                    </div>
+
+                    <div class="contacts">
+                        <div class="container">
+                            <div class="c1">
+                                <div class="contacts-title">Working hours</div>
+
+                                <ul class="contacts-list">
+                                    <li>
+                                        <div class="contacts-list--item">Monday To Friday</div>
+                                    </li>
+
+                                    <li>
+                                        <div class="contacts-list--item">9:00 AM to 8:00 PM</div>
+                                    </li>
+
+                                    <li>
+                                        <div class="contacts-list--item">EET</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="c2">
+                                <div class="contacts-title">Contacts Us</div>
+
+                                <ul class="contacts-list">
+                                    <li>
+                                        <div class="contacts-list--item">slider@vmdev.space</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="cf" action="" class="contacts-form">
+                        <div class="form">
+                            <div class="contacts-form-fields">
+                                <div class="field">
+                                    <div class="contacts-form--field">
+                                        <input type="text" class="input" placeholder="Name">
+                                        <div class="error">error</div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="contacts-form--field">
+                                        <input type="text" class="input" placeholder="Email">
+                                        <div class="error">error</div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="contacts-form--field">
+                                        <textarea name="" id="" class="textarea" placeholder="Message"></textarea>
+                                        <div class="error">error</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="submit">
+                                <input type="submit" class="contacts-form--submit" value="Send Message">
+                            </div>
+                        </div>
+
+                        <!-- preloader -->
+                        <!-- classList: d a -->
+                        <!-- display: block | opacity: 1 -->
+                        <div class="form-preloader-overlay">
+                            <div class="form-preloader">
+                                <div class="container">
+                                    <ul class="preloader-modes">
+
+                                        <!-- classList: on -->
+                                        <!-- display: block -->
+                                        <li class="mode sending on">
+                                            <div class="preloader-mode">
+                                                <div class="loadingio-spinner-spinner-go6ip63iaz">
+                                                    <div class="ldio-m9d4numlatn">
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="mode success">
+                                            <div class="preloader-mode">
+                                                <div class="title">Success!</div>
+
+                                                <div class="message">
+                                                    <p>The subscribe request has sent</p>
+                                                    <p>Check your email and confirm your subscription</p>
+                                                </div>
+
+                                                <div class="close">
+                                                    <button>Close</button>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="mode error">
+                                            <div class="preloader-mode">
+                                                <div class="title">Error!</div>
+
+                                                <div class="message">
+                                                    <p>Looks like server error!</p>
+                                                </div>
+
+                                                <div class="link">
+                                                    <div class="preload-mode--link">
+                                                        <span class="t">Visit <a href="" class="">Contacts</a> page</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="close">
+                                                    <button>Close</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end preloader -->
+                    </form>
                 </div>
             </div>
-{% endblock%} 
+{% endblock%}

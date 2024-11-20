@@ -47,14 +47,14 @@ var __publicField = (obj, key, value) => {
 })();
 const style = "";
 const form = document.querySelector(".footer-subscribe-form");
-const footerSubscribePreloader = document.querySelector(".footer-subscribe-preloader");
+const formPreloaderOverlay = document.querySelector("#fs > .form-preloader-overlay");
 const preloaderModes = document.querySelectorAll(".preloader-modes .mode");
 if (form != null) {
   form.addEventListener("submit", function(e) {
     e.preventDefault();
-    footerSubscribePreloader.classList.add("d");
+    formPreloaderOverlay.classList.add("d");
     setTimeout(function() {
-      footerSubscribePreloader.classList.add("a");
+      formPreloaderOverlay.classList.add("a");
       setTimeout(function() {
         preloaderModes[0].classList.remove("on");
         preloaderModes[1].classList.add("on");
