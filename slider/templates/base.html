@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>
         {% block title %}
         {% endblock %}
@@ -100,7 +101,7 @@
                     </div>
 
                     <div class="c3">
-                        <div class="footer-subscribe">
+                        <div id="fs" class="footer-subscribe">
                             <div class="container">
                                 <div class="c1">
                                     <div class="subscribe-message">
@@ -159,11 +160,16 @@
                                 </div>
                             </div>
 
-                            <div class="footer-subscribe-preloader">
-                                <div class="footer-subscribe--preloader">
+                            <!-- preloader -->
+                            <!-- classList: d a -->
+                            <!-- display: block | opacity: 1 -->
+                            <div class="form-preloader-overlay">
+                                <div class="form-preloader">
                                     <div class="container">
                                         <ul class="preloader-modes">
 
+                                            <!-- classList: on -->
+                                            <!-- display: block -->
                                             <li class="mode sending on">
                                                 <div class="preloader-mode">
                                                     <div class="loadingio-spinner-spinner-go6ip63iaz">
@@ -236,6 +242,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- end preloader -->
+
                         </div>
                     </div>
 

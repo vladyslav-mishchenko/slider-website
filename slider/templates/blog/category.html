@@ -9,7 +9,7 @@ Blog Category
             {% load static %}
             <div class="blog-category g">
                 <div class="container">
-                    <div class="blog-category--columns">
+                    <div class="two-columns">
                         <main class="main">
                             <ul class="blog-category-previews">
                                 {% for post in posts %}
@@ -44,12 +44,12 @@ Blog Category
                                     <div class="aside-block">
                                         <div class="aside-block--title">Categories</div>
 
-                                        <nav class="blog-category-nav">
-                                            <ul class="blog-category-menu">
+                                        <nav class="aside-nav">
+                                            <ul class="aside-menu">
                                                 {% for category in categories %}
                                                 <li class="item">
                                                     <a href="{% url 'blog:category' category.category_slug %}" class="link">
-                                                        <div class="blog-category--item">{{ category.name }}</div>
+                                                        <div class="aside-menu--item">{{ category.name }}</div>
                                                     </a>
                                                 </li>
                                                 {% endfor %}
