@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import DocsArticle, DocsLink
 
-# Register your models here.
+admin.site.register(DocsArticle)
+admin.site.register(DocsLink)

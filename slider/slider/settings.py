@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'docs',
     'blog',
     'contacts',
+    'pages',
 ]
 
 MIDDLEWARE = [
